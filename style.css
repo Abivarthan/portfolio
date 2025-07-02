@@ -154,7 +154,11 @@ img {
   z-index: 1000;
   transition: var(--transition);
 }
-
+.header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .header.scrolled {
   padding: 1.5rem 0;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -1084,14 +1088,17 @@ img {
   color: #333;
 }
 
+
 .social-links {
   margin-top: 20px;
 }
 
 .social-links a {
-  display: inline-block;
+  display: flex;
   font-size: 20px;
   margin-right: 15px;
+  width: 4rem;
+  height: 4rem;
   color: #0077ff;
   transition: transform 0.3s, color 0.3s;
 }
