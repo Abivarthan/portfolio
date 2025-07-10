@@ -12,12 +12,13 @@ const typed = new Typed(".typing-text", {
 // Hamburger Toggle
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
+const body = document.body;
 
-if (hamburger && navList) {
-  hamburger.addEventListener('click', () => {
-    navList.classList.toggle('show');
-  });
-}
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navList.classList.toggle('show');
+  body.classList.toggle('no-scroll'); // ✅ prevent overflow when menu is open
+});
 
 // Back to Top
 const backToTop = document.querySelector('.back-to-top');
